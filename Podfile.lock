@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (5.4.3)
+  - PromiseKit (6.15.3):
+    - PromiseKit/CorePromise (= 6.15.3)
+    - PromiseKit/Foundation (= 6.15.3)
+    - PromiseKit/UIKit (= 6.15.3)
+  - PromiseKit/CorePromise (6.15.3)
+  - PromiseKit/Foundation (6.15.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.15.3):
+    - PromiseKit/CorePromise
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - SnapKit (5.0.1)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - PromiseKit
+  - RxCocoa
+  - RxSwift
+  - SnapKit
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PromiseKit
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  PromiseKit: 3b2b6995e51a954c46dbc550ce3da44fbfb563c5
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 64c12d6f67ecadcfdd631df48a9d2a0ea34625a9
+
+COCOAPODS: 1.10.1

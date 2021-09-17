@@ -1,0 +1,6 @@
+framework module Pods_LootPop {
+  umbrella header "Pods-LootPop-umbrella.h"
+
+  export *
+  module * { export * }
+}

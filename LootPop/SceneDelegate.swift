@@ -20,11 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.assembler = Assembler([
-            AllServiceRegistration(),
+            ServiceRegistrationAssembly(),
             ServiceAssembly()
         ])
         
         self.coordinator = MainCoordinator(navigationController: UINavigationController())
+        self.coordinator.navigationController.modalPresentationStyle = .fullScreen
         self.coordinator.resolver = self.assembler.resolver
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
@@ -34,6 +35,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //THIS NEEDS TO BE HERE OR UNBLANCED CALLS ERROR SHOWS UP
         self.coordinator.start()
+        
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

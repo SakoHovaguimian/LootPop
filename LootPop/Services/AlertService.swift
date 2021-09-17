@@ -32,7 +32,7 @@ protocol AlertServiceProtocol: AnyObject {
     // ViewControllers
     
     func present(_ vc: UIViewController)
-    func presentZoomImageView()
+    func presentZoomImageView(with image: UIImage)
     
 }
 
@@ -65,14 +65,7 @@ class AlertService: AlertServiceProtocol {
     }
     
     func showView() {
-        
-        let testView = TestView(text: "Sasko osgkjs", spacing: .custom(40))
-        let vc = CardViewController(view: testView)
-        vc.presentCard(from: self.currentWindow) {
-            print("Test")
-        }
-//        present(test)
-        
+        //Do Something
     }
     
     func showView(_ view: UIView) {
@@ -108,8 +101,13 @@ class AlertService: AlertServiceProtocol {
         self.currentWindow.present(vc, animated: true, completion: nil)
     }
     
-    func presentZoomImageView() {
-        present(PanGestureViewController())
+    func presentZoomImageView(with image: UIImage) {
+        
+        let vc = PanGestureViewController()
+            .setup(image: image)
+        
+        present(vc)
+        
     }
     
 }

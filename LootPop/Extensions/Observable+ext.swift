@@ -26,3 +26,27 @@ public extension ObservableType /* Value */ {
     }
     
 }
+
+//Examples
+
+///ViewModel
+
+    //private var _quiz = BehaviorRelay<Quiz?>(value: nil)
+    //var quiz: Observable<Quiz?> {
+    //    return self._quiz.asObservable()
+    //}
+
+///ViewController
+
+    //self.viewModel.currentQuestion
+    //    .skip(1)
+    //    .observe(on: MainScheduler.instance)
+    //    .bind {
+    //
+    //        self.questionTextView.text = $0?.text
+    //        self.updateAnswers($0!.answers)
+    //
+    //    }
+    //    .disposed(by: self.disposeBag)
+
+

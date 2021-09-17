@@ -12,6 +12,8 @@ class ServiceAssembly: Assembly {
     
     func assemble(container: Container) {
         
+        // HomeViewModel
+        
         container.register(HomeViewModel.self) { resolver in
             return HomeViewModel(
                 loggerService: resolver.resolve(LoggerServiceProtocol.self)!,
@@ -23,7 +25,7 @@ class ServiceAssembly: Assembly {
     
 }
 
-class AllServiceRegistration: Assembly {
+class ServiceRegistrationAssembly: Assembly {
     
     func assemble(container: Container) {
         

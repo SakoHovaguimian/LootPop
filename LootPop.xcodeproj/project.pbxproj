@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,9 +28,13 @@
 		3D995D7326F5574000A74C75 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7126F5574000A74C75 /* LoggerService.swift */; };
 		3D995D7426F5574000A74C75 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7226F5574000A74C75 /* AlertService.swift */; };
 		3D995D7626F5574900A74C75 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7526F5574900A74C75 /* UserDefaultsService.swift */; };
+		3D995D7826F55C7500A74C75 /* PanGestureImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */; };
+		748BE110FFCB2D8DA955E499 /* Pods_LootPop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0519814AE8DCDA1489B28F /* Pods_LootPop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04FCB41DF64EB1D8DE3780FE /* Pods-LootPop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LootPop.release.xcconfig"; path = "Target Support Files/Pods-LootPop/Pods-LootPop.release.xcconfig"; sourceTree = "<group>"; };
+		2F0519814AE8DCDA1489B28F /* Pods_LootPop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LootPop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D995D3326F553D400A74C75 /* LootPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D995D3626F553D400A74C75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D995D3826F553D400A74C75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		3D995D7126F5574000A74C75 /* LoggerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerService.swift; sourceTree = "<group>"; };
 		3D995D7226F5574000A74C75 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		3D995D7526F5574900A74C75 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureImageViewController.swift; sourceTree = "<group>"; };
+		72517269C357A9AC7C4FC83C /* Pods-LootPop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LootPop.debug.xcconfig"; path = "Target Support Files/Pods-LootPop/Pods-LootPop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748BE110FFCB2D8DA955E499 /* Pods_LootPop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +79,8 @@
 			children = (
 				3D995D3526F553D400A74C75 /* LootPop */,
 				3D995D3426F553D400A74C75 /* Products */,
+				DEF163F7CDA80D546F2659B8 /* Pods */,
+				460867E9FF2916415125D282 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +155,7 @@
 				3D995D5E26F5556B00A74C75 /* ToastView.swift */,
 				3D995D6026F5557100A74C75 /* ScrollingStackView.swift */,
 				3D995D6226F5557900A74C75 /* PanZoomImageView.swift */,
+				3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */,
 				3D995D6426F5557F00A74C75 /* CardViewController.swift */,
 			);
 			path = SubClasses;
@@ -168,6 +178,23 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		460867E9FF2916415125D282 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F0519814AE8DCDA1489B28F /* Pods_LootPop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEF163F7CDA80D546F2659B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72517269C357A9AC7C4FC83C /* Pods-LootPop.debug.xcconfig */,
+				04FCB41DF64EB1D8DE3780FE /* Pods-LootPop.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D995D4726F553D600A74C75 /* Build configuration list for PBXNativeTarget "LootPop" */;
 			buildPhases = (
+				98936EFCECE84F9DDC71EC1D /* [CP] Check Pods Manifest.lock */,
 				3D995D2F26F553D400A74C75 /* Sources */,
 				3D995D3026F553D400A74C75 /* Frameworks */,
 				3D995D3126F553D400A74C75 /* Resources */,
+				1E9205F4155110AC6585B5A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,7 +233,7 @@
 				};
 			};
 			buildConfigurationList = 3D995D2E26F553D400A74C75 /* Build configuration list for PBXProject "LootPop" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -233,6 +262,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E9205F4155110AC6585B5A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LootPop/Pods-LootPop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LootPop/Pods-LootPop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LootPop/Pods-LootPop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98936EFCECE84F9DDC71EC1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LootPop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D995D2F26F553D400A74C75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,6 +315,7 @@
 				3D995D3726F553D400A74C75 /* AppDelegate.swift in Sources */,
 				3D995D6126F5557100A74C75 /* ScrollingStackView.swift in Sources */,
 				3D995D6D26F555B100A74C75 /* HomeViewController.swift in Sources */,
+				3D995D7826F55C7500A74C75 /* PanGestureImageViewController.swift in Sources */,
 				3D995D3926F553D400A74C75 /* SceneDelegate.swift in Sources */,
 				3D995D6326F5557900A74C75 /* PanZoomImageView.swift in Sources */,
 				3D995D5126F554C000A74C75 /* Coordinator.swift in Sources */,
@@ -325,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -392,6 +464,7 @@
 		};
 		3D995D4826F553D600A74C75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72517269C357A9AC7C4FC83C /* Pods-LootPop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,11 +473,11 @@
 				DEVELOPMENT_TEAM = QNK29NH27H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LootPop/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LootPop;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,12 +487,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3D995D4926F553D600A74C75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04FCB41DF64EB1D8DE3780FE /* Pods-LootPop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,11 +502,11 @@
 				DEVELOPMENT_TEAM = QNK29NH27H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LootPop/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LootPop;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,7 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
