@@ -38,7 +38,13 @@ class HomeViewController: UIViewController {
         
         // View
         
-        self.view.backgroundColor = .red
+        self.view.simpleGradient(
+            colors: [
+                LPColor.lightPurple.color,
+                LPColor.lightBlue.color
+            ],
+            direction: .topToBottom
+        )
         
     }
     

@@ -29,6 +29,7 @@
 		3D995D7426F5574000A74C75 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7226F5574000A74C75 /* AlertService.swift */; };
 		3D995D7626F5574900A74C75 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7526F5574900A74C75 /* UserDefaultsService.swift */; };
 		3D995D7826F55C7500A74C75 /* PanGestureImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */; };
+		3D995D7A26F5615000A74C75 /* LPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7926F5615000A74C75 /* LPColor.swift */; };
 		748BE110FFCB2D8DA955E499 /* Pods_LootPop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0519814AE8DCDA1489B28F /* Pods_LootPop.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		3D995D7226F5574000A74C75 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		3D995D7526F5574900A74C75 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureImageViewController.swift; sourceTree = "<group>"; };
+		3D995D7926F5615000A74C75 /* LPColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPColor.swift; sourceTree = "<group>"; };
 		72517269C357A9AC7C4FC83C /* Pods-LootPop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LootPop.debug.xcconfig"; path = "Target Support Files/Pods-LootPop/Pods-LootPop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 		3D995D4E26F5547500A74C75 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
+				3D995D7926F5615000A74C75 /* LPColor.swift */,
 				3D995D5026F554C000A74C75 /* Coordinator.swift */,
 				3D995D5E26F5556B00A74C75 /* ToastView.swift */,
 				3D995D6026F5557100A74C75 /* ScrollingStackView.swift */,
@@ -325,6 +328,7 @@
 				3D995D6526F5557F00A74C75 /* CardViewController.swift in Sources */,
 				3D995D5526F554D900A74C75 /* UIView+ext.swift in Sources */,
 				3D995D7026F556C300A74C75 /* AppAssembly.swift in Sources */,
+				3D995D7A26F5615000A74C75 /* LPColor.swift in Sources */,
 				3D995D6E26F555B100A74C75 /* HomeViewModel.swift in Sources */,
 				3D995D7626F5574900A74C75 /* UserDefaultsService.swift in Sources */,
 				3D995D7426F5574000A74C75 /* AlertService.swift in Sources */,
