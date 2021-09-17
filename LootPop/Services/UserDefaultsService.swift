@@ -1,0 +1,51 @@
+//
+//  UserDefaultsService.swift
+//  Eidolon
+//
+//  Created by Sako Hovaguimian on 9/17/21.
+//
+
+import Foundation
+
+enum Key: String, CaseIterable {
+    
+    case theme
+    case date
+    case numberOfInteractions
+    
+}
+
+protocol UserDefaultsServiceProtocol: AnyObject {
+    
+    func set(value: Any, for key: Key)
+    func get(at key: Key) -> Any
+    func remove(at key: Key)
+    func clearAllKeys()
+    
+}
+
+class UserDefaultsService: UserDefaultsServiceProtocol {
+    
+    let userDefaults = UserDefaults.standard
+    
+    func set(value: Any, for key: Key) {
+        self.userDefaults.set(value, forKey: key.rawValue)
+    }
+    
+    func get(at key: Key) -> Any {
+        self.userDefaults.string(forKey: key.rawValue) as Any
+    }
+    
+    func remove(at key: Key) {
+        self.userDefaults.removeObject(forKey: key.rawValue)
+    }
+    
+    func clearAllKeys() {
+        
+        Key.allCases.forEach {
+            remove(at: $0)
+        }
+        
+    }
+    
+}
