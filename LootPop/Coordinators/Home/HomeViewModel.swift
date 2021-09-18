@@ -20,6 +20,11 @@ class HomeViewModel {
     private let loggerService: LoggerServiceProtocol!
     private let alertService: AlertServiceProtocol!
     
+    private var _buttonText = BehaviorRelay<String>(value: "Submit")
+    var buttonText: Observable<String> {
+        return self._buttonText.asObservable()
+    }
+    
     private weak var delegate: HomeViewModelDelegate!
     
     init(loggerService: LoggerServiceProtocol,
@@ -35,6 +40,10 @@ class HomeViewModel {
         self.delegate = delegate
         return self
         
+    }
+    
+    public func handleButtonTap() {
+        self._buttonText.accept("Tapped Nice")
     }
     
 }

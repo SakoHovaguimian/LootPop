@@ -26,4 +26,49 @@ extension UIView {
         
     }
     
+    func addTapGesture(action: @escaping UIGestureRecognizer.Action) {
+        
+        let recognizer = UITapGestureRecognizer(action: action)
+        addGestureRecognizer(recognizer)
+                
+    }
+    
+}
+
+public extension UIGestureRecognizer {
+    
+    typealias Action = (UIGestureRecognizer)->()
+    
+    private struct AssociatedKeys {
+        static var action: UInt8 = 0
+    }
+    
+    private var action: Action? {
+        
+        get {
+            guard let value = objc_getAssociatedObject(self, &AssociatedKeys.action) as? Action else { return nil }
+            return value
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &AssociatedKeys.action, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        
+    }
+    
+    convenience init(action: @escaping Action) {
+        
+        self.init()
+        self.action = action
+        
+        self.addTarget(
+            self,
+            action: #selector(handleAction(_:))
+        )
+        
+    }
+    
+    @objc private func handleAction(_ recognizer: UIGestureRecognizer) {
+        action?(self)
+    }
+    
 }

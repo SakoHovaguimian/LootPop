@@ -30,6 +30,7 @@
 		3D995D7626F5574900A74C75 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7526F5574900A74C75 /* UserDefaultsService.swift */; };
 		3D995D7826F55C7500A74C75 /* PanGestureImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */; };
 		3D995D7A26F5615000A74C75 /* LPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7926F5615000A74C75 /* LPColor.swift */; };
+		3DC22B8B26F69F7400D53720 /* LPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC22B8A26F69F7400D53720 /* LPImage.swift */; };
 		748BE110FFCB2D8DA955E499 /* Pods_LootPop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0519814AE8DCDA1489B28F /* Pods_LootPop.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		3D995D7526F5574900A74C75 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureImageViewController.swift; sourceTree = "<group>"; };
 		3D995D7926F5615000A74C75 /* LPColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPColor.swift; sourceTree = "<group>"; };
+		3DC22B8A26F69F7400D53720 /* LPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPImage.swift; sourceTree = "<group>"; };
 		72517269C357A9AC7C4FC83C /* Pods-LootPop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LootPop.debug.xcconfig"; path = "Target Support Files/Pods-LootPop/Pods-LootPop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +162,7 @@
 				3D995D6226F5557900A74C75 /* PanZoomImageView.swift */,
 				3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */,
 				3D995D6426F5557F00A74C75 /* CardViewController.swift */,
+				3DC22B8A26F69F7400D53720 /* LPImage.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -177,8 +180,16 @@
 				3D995D6926F555B100A74C75 /* HomeCoordinator.swift */,
 				3D995D6B26F555B100A74C75 /* HomeViewModel.swift */,
 				3D995D6A26F555B100A74C75 /* HomeViewController.swift */,
+				3D995D7B26F56AF500A74C75 /* Cells */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3D995D7B26F56AF500A74C75 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		460867E9FF2916415125D282 /* Frameworks */ = {
@@ -321,6 +332,7 @@
 				3D995D7826F55C7500A74C75 /* PanGestureImageViewController.swift in Sources */,
 				3D995D3926F553D400A74C75 /* SceneDelegate.swift in Sources */,
 				3D995D6326F5557900A74C75 /* PanZoomImageView.swift in Sources */,
+				3DC22B8B26F69F7400D53720 /* LPImage.swift in Sources */,
 				3D995D5126F554C000A74C75 /* Coordinator.swift in Sources */,
 				3D995D7326F5574000A74C75 /* LoggerService.swift in Sources */,
 				3D995D6C26F555B100A74C75 /* HomeCoordinator.swift in Sources */,
