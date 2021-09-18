@@ -253,6 +253,9 @@ class ToastView: UIView {
             
             self.dismissTimer = Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { [weak self] _ in
                 
+                if let completion = completion {
+                    completion()
+                }
                 self?.hide()
                 
                 self?.dismissTimer?.invalidate()
@@ -260,7 +263,12 @@ class ToastView: UIView {
                 
             }
             
-        case .untilDismissed: break
+        case .untilDismissed:
+            
+            if let completion = completion {
+                completion()
+            }
+            
         }
         
     }
@@ -282,6 +290,11 @@ class ToastView: UIView {
             self.toastContentView.transform = startingTransform
             
         } completion: { (bool) in
+           
+            if let completion = completion {
+                completion()
+            }
+            
             self.removeFromSuperview()
         }
         
