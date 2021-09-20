@@ -16,8 +16,9 @@ class ServiceAssembly: Assembly {
         
         container.register(HomeViewModel.self) { resolver in
             return HomeViewModel(
-                loggerService: resolver.resolve(LoggerServiceProtocol.self)!,
-                alertService: resolver.resolve(AlertServiceProtocol.self)!
+                apiService: resolver.resolve(APIServiceProtocol.self)!,
+                alertService: resolver.resolve(AlertServiceProtocol.self)!,
+                firebaseService: resolver.resolve(FirebaseServiceProtocol.self)!
             )
         }.inObjectScope(.container)
         
@@ -29,21 +30,42 @@ class ServiceRegistrationAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        // UserDefaults
-        container.register(UserDefaultsServiceProtocol.self) { resolver in
-            return UserDefaultsService()
-        }.inObjectScope(.container)
-        
         // Logger
         
-        container.register(LoggerServiceProtocol.self) { resolver in
+        container.register(LoggerServiceProtocol.self) { resolver in 
             return LoggerService()
+        }.inObjectScope(.container)
+        
+        // API
+        
+        container.register(APIServiceProtocol.self) { resolver in
+            return APIService(
+                loggerService: resolver.resolve(LoggerServiceProtocol.self)!
+            )
+        }.inObjectScope(.container)
+        
+        // UserDefaults
+        
+        container.register(UserDefaultsServiceProtocol.self) { resolver in
+            return UserDefaultsService(
+                loggerService: resolver.resolve(LoggerServiceProtocol.self)!
+            )
         }.inObjectScope(.container)
         
         // Alert
         
         container.register(AlertServiceProtocol.self) { resolver in
-            return AlertService()
+            return AlertService(
+                loggerService: resolver.resolve(LoggerServiceProtocol.self)!
+            )
+        }.inObjectScope(.container)
+        
+        // Firebase
+        
+        container.register(FirebaseServiceProtocol.self) { resolver in
+            return FirebaseService(
+                loggerService: resolver.resolve(LoggerServiceProtocol.self)!
+            )
         }.inObjectScope(.container)
         
     }

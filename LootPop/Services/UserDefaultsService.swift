@@ -16,7 +16,7 @@ enum Key: String, CaseIterable {
 }
 
 protocol UserDefaultsServiceProtocol: AnyObject {
-    
+        
     func set(value: Any, for key: Key)
     func get(at key: Key) -> Any
     func remove(at key: Key)
@@ -26,7 +26,16 @@ protocol UserDefaultsServiceProtocol: AnyObject {
 
 class UserDefaultsService: UserDefaultsServiceProtocol {
     
+    private let loggerService: LoggerServiceProtocol!
+        
     let userDefaults = UserDefaults.standard
+    
+    init(loggerService: LoggerServiceProtocol) {
+        
+        self.loggerService = loggerService
+        self.loggerService.start(with: .userDefaults)
+        
+    }
     
     func set(value: Any, for key: Key) {
         self.userDefaults.set(value, forKey: key.rawValue)

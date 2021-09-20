@@ -31,6 +31,9 @@
 		3D995D7826F55C7500A74C75 /* PanGestureImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */; };
 		3D995D7A26F5615000A74C75 /* LPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D995D7926F5615000A74C75 /* LPColor.swift */; };
 		3DC22B8B26F69F7400D53720 /* LPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC22B8A26F69F7400D53720 /* LPImage.swift */; };
+		3DC22B8D26F6A0EA00D53720 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC22B8C26F6A0EA00D53720 /* APIService.swift */; };
+		3DDF0A1326F7C0CA00E16895 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF0A1226F7C0CA00E16895 /* FirebaseService.swift */; };
+		3DDF0A1526F7C61A00E16895 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DDF0A1426F7C61A00E16895 /* GoogleService-Info.plist */; };
 		748BE110FFCB2D8DA955E499 /* Pods_LootPop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0519814AE8DCDA1489B28F /* Pods_LootPop.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanGestureImageViewController.swift; sourceTree = "<group>"; };
 		3D995D7926F5615000A74C75 /* LPColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPColor.swift; sourceTree = "<group>"; };
 		3DC22B8A26F69F7400D53720 /* LPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPImage.swift; sourceTree = "<group>"; };
+		3DC22B8C26F6A0EA00D53720 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3DDF0A1226F7C0CA00E16895 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		3DDF0A1426F7C61A00E16895 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		72517269C357A9AC7C4FC83C /* Pods-LootPop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LootPop.debug.xcconfig"; path = "Target Support Files/Pods-LootPop/Pods-LootPop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,7 @@
 				3D995D3F26F553D600A74C75 /* Assets.xcassets */,
 				3D995D4126F553D600A74C75 /* LaunchScreen.storyboard */,
 				3D995D4426F553D600A74C75 /* Info.plist */,
+				3DDF0A1426F7C61A00E16895 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,6 +132,8 @@
 		3D995D4B26F5545C00A74C75 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3DC22B8C26F6A0EA00D53720 /* APIService.swift */,
+				3DDF0A1226F7C0CA00E16895 /* FirebaseService.swift */,
 				3D995D7226F5574000A74C75 /* AlertService.swift */,
 				3D995D7126F5574000A74C75 /* LoggerService.swift */,
 				3D995D7526F5574900A74C75 /* UserDefaultsService.swift */,
@@ -156,13 +165,13 @@
 			isa = PBXGroup;
 			children = (
 				3D995D7926F5615000A74C75 /* LPColor.swift */,
+				3DC22B8A26F69F7400D53720 /* LPImage.swift */,
 				3D995D5026F554C000A74C75 /* Coordinator.swift */,
 				3D995D5E26F5556B00A74C75 /* ToastView.swift */,
 				3D995D6026F5557100A74C75 /* ScrollingStackView.swift */,
 				3D995D6226F5557900A74C75 /* PanZoomImageView.swift */,
 				3D995D7726F55C7500A74C75 /* PanGestureImageViewController.swift */,
 				3D995D6426F5557F00A74C75 /* CardViewController.swift */,
-				3DC22B8A26F69F7400D53720 /* LPImage.swift */,
 			);
 			path = SubClasses;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 			files = (
 				3D995D4326F553D600A74C75 /* LaunchScreen.storyboard in Resources */,
 				3D995D4026F553D600A74C75 /* Assets.xcassets in Resources */,
+				3DDF0A1526F7C61A00E16895 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +343,7 @@
 				3D995D3926F553D400A74C75 /* SceneDelegate.swift in Sources */,
 				3D995D6326F5557900A74C75 /* PanZoomImageView.swift in Sources */,
 				3DC22B8B26F69F7400D53720 /* LPImage.swift in Sources */,
+				3DDF0A1326F7C0CA00E16895 /* FirebaseService.swift in Sources */,
 				3D995D5126F554C000A74C75 /* Coordinator.swift in Sources */,
 				3D995D7326F5574000A74C75 /* LoggerService.swift in Sources */,
 				3D995D6C26F555B100A74C75 /* HomeCoordinator.swift in Sources */,
@@ -341,6 +352,7 @@
 				3D995D5526F554D900A74C75 /* UIView+ext.swift in Sources */,
 				3D995D7026F556C300A74C75 /* AppAssembly.swift in Sources */,
 				3D995D7A26F5615000A74C75 /* LPColor.swift in Sources */,
+				3DC22B8D26F6A0EA00D53720 /* APIService.swift in Sources */,
 				3D995D6E26F555B100A74C75 /* HomeViewModel.swift in Sources */,
 				3D995D7626F5574900A74C75 /* UserDefaultsService.swift in Sources */,
 				3D995D7426F5574000A74C75 /* AlertService.swift in Sources */,
@@ -492,6 +504,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = LootPop;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sakohovaguimian.LootPop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hovaguimiansako.lootpop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -521,6 +534,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = LootPop;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -528,7 +542,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sakohovaguimian.LootPop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hovaguimiansako.lootpop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
