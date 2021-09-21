@@ -33,10 +33,10 @@ enum LogType {
             
         // Services
             
-        case .firebase: return "[FirebaseService] - "
-        case .api: return "[APIService] - "
-        case .alert: return "[AlertService] - "
-        case .userDefaults: return "[UserDeafultsService] - "
+        case .firebase: return "[FirebaseService] -"
+        case .api: return "[APIService] -"
+        case .alert: return "[AlertService] -"
+        case .userDefaults: return "[UserDeafultsService] -"
         }
         
     }
@@ -77,7 +77,7 @@ class LoggerService: LoggerServiceProtocol {
     var logger: LogType?
     
     init() {
-        print(String.init(repeating: "🪵", count: 10) + " [LogService] STARTING UP")
+        print(String.init(repeating: "🪵", count: 10) + " [LogService] - STARTING UP")
     }
 
     func start(with logType: LogType) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol HomeCoordinatorDelegate: AnyObject {
     
@@ -33,7 +34,7 @@ class HomeCoordinator: Coordinator {
         
         let homeVC = HomeViewController(viewModel: viewModel)
         
-        self.navigationController.modalPresentationStyle = .fullScreen
+        self.navigationController.modalPresentationStyle = .overCurrentContext
         self.navigationController.navigationBar.isHidden = true
         self.navigationController.pushViewController(
             homeVC,

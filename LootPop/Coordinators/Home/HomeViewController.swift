@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         setupSubviews()
@@ -38,7 +39,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        
+
         super.viewWillLayoutSubviews()
         
         self.submitButton.layer.cornerRadius = 23
@@ -79,6 +80,7 @@ class HomeViewController: UIViewController {
         self.submitButton.clipsToBounds = true
         self.submitButton.addTapGesture { action in
             self.viewModel.handleButtonTap()
+            self.cardImageView.layer.removeAllAnimations()
         }
         self.view.addSubview(self.submitButton)
         self.submitButton.snp.makeConstraints { make in
@@ -94,11 +96,29 @@ class HomeViewController: UIViewController {
         self.cardImageView = UIImageView(image: UIImage(systemName: "greetingcard"))
         self.cardImageView.backgroundColor = LPColor.brandPink.color
         self.cardImageView.isUserInteractionEnabled = true
+        self.cardImageView.layer.cornerRadius = 34
         self.cardImageView.addTapGesture { _ in
             
             let image = UIImage(systemName: "greetingcard.fill")
             self.cardImageView.image = image
-            UIView.transition(with: self.cardImageView, duration: 1.0, options: .transitionFlipFromRight, animations: nil, completion: nil)
+            
+            UIView.animate(withDuration: 0.01) {
+                
+                self.viewModel.animateCardView(self.cardImageView)
+                
+            } completion: { completion in
+                
+                UIView.transition(
+                    with: self.cardImageView,
+                    duration: 1.0,
+                    options: .transitionFlipFromLeft,
+                    animations: nil,
+                    completion: { _ in
+                        print("Done")
+                    }
+                )
+                
+            }
             
         }
         self.view.addSubview(self.cardImageView)

@@ -93,4 +93,19 @@ class HomeViewModel {
         
     }
     
+    public func animateCardView(_ view: UIView) {
+        
+        view.shake(duration: 4.0)
+        
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath:"transform.rotation.z")
+        rotation.duration = 0.1
+        rotation.isRemovedOnCompletion = false
+        rotation.repeatCount = HUGE
+        rotation.fromValue = NSNumber(value: -0.2)
+        rotation.toValue = 0.2
+        rotation.autoreverses = true
+        view.layer.add(rotation, forKey: "rotate")
+
+    }
+    
 }

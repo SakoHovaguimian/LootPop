@@ -22,7 +22,7 @@ class MainCoordinator: Coordinator {
     
     func start() {
         
-        self.navigationController.modalPresentationStyle = .fullScreen
+        self.navigationController.modalPresentationStyle = .overCurrentContext
         self.navigationController.navigationBar.isHidden = true
         
         let nc = UINavigationController()
