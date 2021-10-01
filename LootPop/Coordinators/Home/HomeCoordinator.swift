@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 
 protocol HomeCoordinatorDelegate: AnyObject {
-    
+
 }
 
 class HomeCoordinator: Coordinator {

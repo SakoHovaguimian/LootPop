@@ -18,8 +18,8 @@ enum Key: String, CaseIterable {
 protocol UserDefaultsServiceProtocol: AnyObject {
         
     func set(value: Any, for key: Key)
-    func get(at key: Key) -> Any
-    func remove(at key: Key)
+    func get(for key: Key) -> Any
+    func remove(for key: Key)
     func clearAllKeys()
     
 }
@@ -41,18 +41,18 @@ class UserDefaultsService: UserDefaultsServiceProtocol {
         self.userDefaults.set(value, forKey: key.rawValue)
     }
     
-    func get(at key: Key) -> Any {
+    func get(for key: Key) -> Any {
         self.userDefaults.string(forKey: key.rawValue) as Any
     }
     
-    func remove(at key: Key) {
+    func remove(for key: Key) {
         self.userDefaults.removeObject(forKey: key.rawValue)
     }
     
     func clearAllKeys() {
         
         Key.allCases.forEach {
-            remove(at: $0)
+            remove(for: $0)
         }
         
     }

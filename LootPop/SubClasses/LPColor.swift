@@ -16,6 +16,8 @@ public enum LPColor: String {
     
     // Brand
     
+    case backgroundGray = "#E2E4E9"
+    
     case brandPink = "#F39AAD"
     case brandYellow = "#FCFCD4"
     case brandBlue = "#9dceff"

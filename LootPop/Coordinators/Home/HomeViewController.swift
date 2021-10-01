@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     
     private var submitButton: UIButton!
     private var cardImageView: UIImageView!
+    private var cardView: UIView!
     
     init(viewModel: HomeViewModel) {
         
@@ -59,13 +60,15 @@ class HomeViewController: UIViewController {
         
         // View
         
-        self.view.simpleGradient(
-            colors: [
-                LPColor.lightPurple.color,
-                LPColor.lightBlue.color
-            ],
-            direction: .topToBottom
-        )
+//        self.view.simpleGradient(
+//            colors: [
+//                LPColor.lightPurple.color,
+//                LPColor.lightBlue.color
+//            ],
+//            direction: .topToBottom
+//        )
+        
+        self.view.backgroundColor = LPColor.backgroundGray.color
         
         // BlurView
         
@@ -129,6 +132,33 @@ class HomeViewController: UIViewController {
             make.height.equalTo(Spacing.custom(300).value)
         }
         
+        // CardView
+        
+        self.cardView = UIView()
+        self.cardView.layer.cornerRadius = Spacing.medium.value
+        self.cardView.backgroundColor = .white
+        self.view.addSubview(self.cardView)
+        self.cardView.snp.makeConstraints { make in
+            make.top.equalTo(self.cardImageView.snp.bottom).offset(Spacing.xLarge.value)
+            make.left.equalTo(Spacing.xLarge.value)
+            make.right.equalTo(-Spacing.xLarge.value)
+            make.height.equalTo(100)
+        }
+        self.cardView.addShadow(
+            opacity: 0.1,
+            offset: CGSize(width: 0, height: 0),
+            radius: 4
+        )
+        
+        self.cardView.addTapGesture { _ in
+            
+            let updatedColor = self.cardView.backgroundColor == LPColor.brandPurple.color
+            ? .white
+            : LPColor.brandPurple.color
+            
+            self.cardView.backgroundColor = updatedColor
+            
+        }
         
     }
     

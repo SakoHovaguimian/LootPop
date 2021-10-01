@@ -48,8 +48,6 @@ class MainCoordinator: Coordinator {
 
 extension MainCoordinator: HomeCoordinatorDelegate {
     
-    
-    
 }
     
     //MARK:- Alawys Append and Remove Coordinator from child...

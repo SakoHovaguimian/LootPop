@@ -89,13 +89,22 @@ class LoggerService: LoggerServiceProtocol {
 
     func log(_ message: String) {
 
-        guard let logger = self.logger else { return }
+        guard let logger = self.logger else {
+            
+            logError()
+            return
+            
+        }
 
         var log: String = "\n \n \n \(logger.emoji) \(logger.title)"
         log += " \(message)"
 
         print(log)
 
+    }
+    
+    private func logError() {
+        return print(String.init(repeating: "❌", count: 10) + "START FUNCTION WAS NEVER CALLED")
     }
     
 }

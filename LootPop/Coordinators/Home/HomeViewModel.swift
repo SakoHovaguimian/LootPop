@@ -94,7 +94,7 @@ class HomeViewModel {
     }
     
     public func animateCardView(_ view: UIView) {
-        
+
         view.shake(duration: 4.0)
         
         let rotation : CABasicAnimation = CABasicAnimation(keyPath:"transform.rotation.z")
