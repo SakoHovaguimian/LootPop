@@ -13,4 +13,7 @@ target 'LootPop' do
   pod 'Alamofire'
   pod 'SnapKit'
 
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+
 end

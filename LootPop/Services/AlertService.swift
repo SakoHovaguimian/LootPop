@@ -38,10 +38,19 @@ protocol AlertServiceProtocol: AnyObject {
 
 class AlertService: AlertServiceProtocol {
     
+    private let loggerService: LoggerServiceProtocol!
+    
     var currentModalViewController: UIViewController?
     
     var currentWindow: UIViewController {
         return (UIApplication.shared.windows.last?.rootViewController)!
+    }
+    
+    init(loggerService: LoggerServiceProtocol) {
+        
+        self.loggerService = loggerService
+        self.loggerService.start(with: .alert)
+        
     }
     
     func showToast(_ toast: Toast) {
